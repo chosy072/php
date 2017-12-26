@@ -1,0 +1,18 @@
+
+create user `test`@`localhost` identified by 'test';
+
+create database php;
+use php;
+create table user_info(
+uino int AUTO_INCREMENT PRIMARY key,
+uiid varchar(100) unique,
+uiname varchar(100) not null,
+uiage int not null,
+uipwd varchar(100) not null);
+
+insert into user_info(uiid, uiname, uiage, uipwd)
+values('red','È«±æµ¿',20,'red'),
+('blue','Ã»±æµ¿',20,'blue'),
+('black','Èæ±æµ¿',20,'black');
+
+grant all PRIVILEGES on  php.* to `test`@`localhost`;
